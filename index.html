@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYD UP - Профессиональные услуги для автомобилей BYD</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007aff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="BYD">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="icon-192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(YANDEX_COUNTER_ID, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/YANDEX_COUNTER_ID" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <!-- VK Pixel -->
+    <script type="text/javascript">
+        !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK_PIXEL_ID"),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+    </script>
+    <noscript><img src="https://vk.com/rtrg?p=VK_PIXEL_ID" style="position:fixed; left:-9999px;" alt=""/></noscript>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">BYD</span>
+                <span class="logo-subtitle">UP</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Профессиональные услуги<br>для автомобилей BYD</h1>
+            <p class="hero-subtitle">Современные решения для вашего электромобиля</p>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="scrollToServices()">Прайс-лист</button>
+                <button class="cta-button" onclick="window.location.href='order.html'">Заказать услугу</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Прайс-лист -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Прайс-лист</h2>
+            <div class="price-list">
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Русификация</h3>
+                            <p>Полная локализация интерфейса на русский язык</p>
+                        </div>
+                        <div class="price-item-price">от 150$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Голосовой помощник</h3>
+                            <p>Голосовое управление на русском языке</p>
+                        </div>
+                        <div class="price-item-price">от 200$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Обновление блоков</h3>
+                            <p>Обновление всех системных блоков автомобиля</p>
+                        </div>
+                        <div class="price-item-price">от 200$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Компьютерная диагностика</h3>
+                            <p>Полная диагностика всех систем автомобиля</p>
+                        </div>
+                        <div class="price-item-price">от 100$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Разблокировка ADAS</h3>
+                            <p>Активация адаптивного круиз-контроля</p>
+                        </div>
+                        <div class="price-item-price">от 500$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Удаленное управление с телефона</h3>
+                            <p>Управление автомобилем через мобильное приложение</p>
+                        </div>
+                        <div class="price-item-price">от 600$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Восстановление мастер аккаунта</h3>
+                            <p>Полное восстановление доступа к мастер аккаунту</p>
+                        </div>
+                        <div class="price-item-price">от 1000$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+                
+                <div class="price-item">
+                    <div class="price-item-content">
+                        <div class="price-item-info">
+                            <h3>Прописывание ключей</h3>
+                            <p>Прописывание и настройка ключей доступа</p>
+                        </div>
+                        <div class="price-item-price">от 100$</div>
+                        <button class="price-item-button" onclick="openBookingModal()">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модели автомобилей -->
+    <section id="models" class="models">
+        <div class="container">
+            <h2 class="section-title">Поддерживаемые модели</h2>
+            <details class="models-toggle">
+                <summary>Список моделей</summary>
+                <div class="models-list">
+                    <a class="model-item" href="yuan-up.html">BYD Yuan Up</a>
+                    <div class="model-item">BYD Seagull</div>
+                    <div class="model-item">BYD Dolphin</div>
+                    <div class="model-item">BYD Qin</div>
+                    <div class="model-item">BYD E2</div>
+                    <div class="model-item">BYD Yuan Plus</div>
+                    <div class="model-item">BYD D1</div>
+                    <div class="model-item">BYD E6</div>
+                    <div class="model-item">BYD Chazor</div>
+                    <div class="model-item">BYD FangChengBao Leopard 3</div>
+                    <div class="model-item">BYD Sea Lion 07</div>
+                    <div class="model-item">BYD Seal 06</div>
+                    <div class="model-item">BYD Song L</div>
+                    <div class="model-item">BYD Song Pro</div>
+                    <div class="model-item">BYD Destroyer 05</div>
+                    <div class="model-item">BYD Frigate 07</div>
+                    <div class="model-item">BYD Seal</div>
+                    <div class="model-item">BYD Song Max</div>
+                    <div class="model-item">BYD Tang</div>
+                    <div class="model-item">BYD Song Plus</div>
+                    <div class="model-item">BYD FangChengBao Leopard 5</div>
+                    <div class="model-item">BYD Han</div>
+                    <div class="model-item">BYD E9</div>
+                    <div class="model-item">BYD Yangwang U9</div>
+                    <div class="model-item">BYD FangChengBao Leopard 8</div>
+                    <div class="model-item">BYD Shark</div>
+                    <div class="model-item">BYD Yangwang U8</div>
+                    <div class="model-item">Denza N9</div>
+                    <div class="model-item">Denza Z9</div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+
+    <!-- Липкие кнопки -->
+    <div class="sticky-booking">
+        <a href="https://t.me/Skyline_7172" class="sticky-telegram" target="_blank">
+            <img src="telegram.png" alt="Telegram" class="sticky-icon-image">
+            <span class="sticky-text">Telegram</span>
+        </a>
+        <button class="sticky-review" onclick="openReviewModal()">
+            <img src="review.png" alt="Оставить отзыв" class="sticky-icon-image">
+            <span class="sticky-text">Оставить отзыв</span>
+        </button>
+    </div>
+
+    <!-- Модальное окно записи -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Заказать услугу</h3>
+                <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон *</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Модель автомобиля *</label>
+                    <select name="model" required>
+                        <option value="">Выберите модель</option>
+                        <option value="BYD Atto 3">BYD Atto 3</option>
+                        <option value="BYD Dolphin">BYD Dolphin</option>
+                        <option value="BYD Seal">BYD Seal</option>
+                        <option value="BYD Tang">BYD Tang</option>
+                        <option value="BYD Han">BYD Han</option>
+                        <option value="BYD Song Plus">BYD Song Plus</option>
+                        <option value="BYD Yuan Plus">BYD Yuan Plus</option>
+                        <option value="Другая модель">Другая модель</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Услуга *</label>
+                    <select name="service" required>
+                        <option value="">Выберите услугу</option>
+                        <option value="Русификация - от 15,000₽">Русификация - от 15,000₽</option>
+                        <option value="Голосовой помощник - от 20,000₽">Голосовой помощник - от 20,000₽</option>
+                        <option value="Обновление блоков - от 25,000₽">Обновление блоков - от 25,000₽</option>
+                        <option value="Прописка ключей - от 8,000₽">Прописка ключей - от 8,000₽</option>
+                        <option value="Восстановление мастер аккаунта - от 12,000₽">Восстановление мастер аккаунта - от 12,000₽</option>
+                        <option value="Разблокировка ADAS - от 50,000₽">Разблокировка ADAS - от 50,000₽</option>
+                        <option value="Диагностика - от 5,000₽">Диагностика - от 5,000₽</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Предпочтительная дата</label>
+                    <input type="date" name="date" min="">
+                </div>
+                <div class="form-group">
+                    <label>Время</label>
+                    <select name="time">
+                        <option value="">Выберите время</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Дополнительная информация</label>
+                    <textarea name="message" rows="3" placeholder="Расскажите подробнее о ваших потребностях"></textarea>
+                </div>
+                <button type="submit" class="booking-submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно отзыва -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Оставить отзыв</h3>
+                <button class="modal-close" onclick="closeReviewModal()">&times;</button>
+            </div>
+            <form class="booking-form" id="reviewForm">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Модель автомобиля</label>
+                    <input type="text" name="model" placeholder="Например: BYD Yuan Up">
+                </div>
+                <div class="form-group">
+                    <label>Ваш отзыв *</label>
+                    <textarea name="review" rows="5" required placeholder="Поделитесь вашим опытом"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Оценка</label>
+                    <select name="rating">
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                </div>
+                <button type="submit" class="booking-submit">Отправить отзыв</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Блок процесса, гарантий и FAQ -->
+    <section class="process-section">
+        <div class="container">
+
+            <div class="faq-section">
+                <h3>Часто задаваемые вопросы</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Сколько времени занимает русификация?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Русификация занимает от 2 до 4 часов в зависимости от модели автомобиля и сложности прошивки.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Безопасно ли обновление блоков?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, мы используем только оригинальное ПО и сертифицированное оборудование. Все работы выполняются с соблюдением протоколов безопасности.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Что нужно для прописки ключей?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Нужны оригинальные ключи и документы на автомобиль. Процедура занимает 30-60 минут.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Предоставляете ли вы гарантию?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, мы предоставляем гарантию 12 месяцев на все виды работ. В случае возникновения проблем, устраняем их бесплатно.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок отзывов и кейсов -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+            <div class="reviews-grid" id="reviewsContainer">
+                <!-- Отзывы будут добавляться динамически -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BYD</span>
+                    <span class="logo-subtitle">UP</span>
+                </div>
+                <p>&copy; 2024 BYD UP. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
