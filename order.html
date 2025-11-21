@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказать услугу | BYD UP</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007aff">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+                <span class="logo-text">BYD</span>
+                <span class="logo-subtitle">UP</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a> / Заказать услугу
+        </div>
+    </section>
+
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content">
+                <h1>Заказать услугу</h1>
+                <p class="service-hero-subtitle">Заполните форму ниже, и мы свяжемся с вами в ближайшее время</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <form class="order-form" id="orderForm">
+                <div class="form-group">
+                    <label>Выберите модель *</label>
+                    <select name="model" required>
+                        <option value="">Выберите модель</option>
+                        <option value="BYD Yuan Up">BYD Yuan Up</option>
+                        <option value="BYD Seagull">BYD Seagull</option>
+                        <option value="BYD Dolphin">BYD Dolphin</option>
+                        <option value="BYD Qin">BYD Qin</option>
+                        <option value="BYD E2">BYD E2</option>
+                        <option value="BYD Yuan Plus">BYD Yuan Plus</option>
+                        <option value="BYD D1">BYD D1</option>
+                        <option value="BYD E6">BYD E6</option>
+                        <option value="BYD Chazor">BYD Chazor</option>
+                        <option value="BYD FangChengBao Leopard 3">BYD FangChengBao Leopard 3</option>
+                        <option value="BYD Sea Lion 07">BYD Sea Lion 07</option>
+                        <option value="BYD Seal 06">BYD Seal 06</option>
+                        <option value="BYD Song L">BYD Song L</option>
+                        <option value="BYD Song Pro">BYD Song Pro</option>
+                        <option value="BYD Destroyer 05">BYD Destroyer 05</option>
+                        <option value="BYD Frigate 07">BYD Frigate 07</option>
+                        <option value="BYD Seal">BYD Seal</option>
+                        <option value="BYD Song Max">BYD Song Max</option>
+                        <option value="BYD Tang">BYD Tang</option>
+                        <option value="BYD Song Plus">BYD Song Plus</option>
+                        <option value="BYD FangChengBao Leopard 5">BYD FangChengBao Leopard 5</option>
+                        <option value="BYD Han">BYD Han</option>
+                        <option value="BYD E9">BYD E9</option>
+                        <option value="BYD Yangwang U9">BYD Yangwang U9</option>
+                        <option value="BYD FangChengBao Leopard 8">BYD FangChengBao Leopard 8</option>
+                        <option value="BYD Shark">BYD Shark</option>
+                        <option value="BYD Yangwang U8">BYD Yangwang U8</option>
+                        <option value="Denza N9">Denza N9</option>
+                        <option value="Denza Z9">Denza Z9</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Версия ПО</label>
+                    <p class="form-hint"><strong>Как узнать версию ПО:</strong> Нажмите Settings (настройки) → DiLink → Version management → Multimedia details check. Откроется окно с версией ПО, сфотографируйте его и загрузите фото по кнопке ниже.</p>
+                    <div class="file-upload-wrapper">
+                        <input type="file" name="firmwarePhoto" id="firmwarePhoto" accept="image/*" style="display: none;">
+                        <button type="button" class="file-upload-button" onclick="document.getElementById('firmwarePhoto').click()">
+                            <span>📷</span> Добавить фото
+                        </button>
+                        <span class="file-name" id="firmwareFileName"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Добавить комментарий</label>
+                    <textarea name="comment" rows="5" placeholder="Опишите вашу задачу или оставьте комментарий"></textarea>
+                    <button type="button" class="comment-save-button" onclick="saveComment()">Сохранить</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" name="name" required placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-group">
+                    <label>Номер телефона *</label>
+                    <input type="tel" name="phone" required placeholder="+7 (999) 123-45-67">
+                </div>
+
+                <button type="submit" class="submit-button">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Липкие кнопки -->
+    <div class="sticky-booking">
+        <a href="https://t.me/Skyline_7172" class="sticky-telegram" target="_blank">
+            <img src="telegram.png" alt="Telegram" class="sticky-icon-image">
+            <span class="sticky-text">Telegram</span>
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BYD</span>
+                    <span class="logo-subtitle">UP</span>
+                </div>
+                <p>&copy; 2024 BYD UP. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Показ имени загруженного файла
+        document.getElementById('firmwarePhoto').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name || '';
+            document.getElementById('firmwareFileName').textContent = fileName;
+        });
+
+        // Сохранение комментария
+        function saveComment() {
+            const comment = document.querySelector('textarea[name="comment"]').value;
+            if (comment.trim()) {
+                localStorage.setItem('orderComment', comment);
+                alert('Комментарий сохранен');
+            }
+        }
+
+        // Восстановление комментария при загрузке страницы
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedComment = localStorage.getItem('orderComment');
+            if (savedComment) {
+                document.querySelector('textarea[name="comment"]').value = savedComment;
+            }
+        });
+
+        // Обработка отправки формы
+        document.getElementById('orderForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitButton = this.querySelector('.submit-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Отправляем...';
+            submitButton.disabled = true;
+
+            const fileInput = document.getElementById('firmwarePhoto');
+            const file = fileInput.files[0];
+
+            const data = {
+                model: this.querySelector('select[name="model"]').value.trim(),
+                comment: this.querySelector('textarea[name="comment"]').value.trim(),
+                name: this.querySelector('input[name="name"]').value.trim(),
+                phone: this.querySelector('input[name="phone"]').value.trim(),
+                photoFile: file || null
+            };
+
+            try {
+                await sendTelegramOrder(data);
+                alert('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+                this.reset();
+                document.getElementById('firmwareFileName').textContent = '';
+                localStorage.removeItem('orderComment');
+            } catch (error) {
+                console.error('Ошибка отправки заявки:', error);
+                alert(error.message || 'Не удалось отправить заявку. Попробуйте позже.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
+
